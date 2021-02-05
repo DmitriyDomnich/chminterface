@@ -1,0 +1,23 @@
+<div class="container">
+  <img src="{{product.image}}" alt="">
+  <div class="info">
+    <h1>
+      {{product.title}}
+    </h1>
+    <p>
+      {{product.description}}
+    </p>
+    
+  </div>
+  <div class="buttons">
+    <ng-container *ngIf='product.isDeliverable; else no'>
+      <button >В корзину!</button>
+    </ng-container>
+    <ng-template #no>
+      <ng-container>
+
+      </ng-container>
+    </ng-template>
+    <button></button>
+  </div>
+</div>
